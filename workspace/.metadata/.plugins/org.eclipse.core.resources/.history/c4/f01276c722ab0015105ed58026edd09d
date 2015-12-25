@@ -1,0 +1,14 @@
+package com.rootrepo.main;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class ClassLoader {
+
+	public static void main(String[] args) {
+		
+		Properties initProperties = new Properties();
+		FileInputStream initFileInputStream = new FileInputStream("D:\selenium\workspace\SELENIUM\source\com\rootrepo\main\InitLoad.properties");
+	}
+}

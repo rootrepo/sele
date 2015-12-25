@@ -1,0 +1,11 @@
+package com.rootrepo.main;
+
+import java.io.File;
+
+public class ClassLoader {
+
+	public static void main(String[] args) {
+		String current_path =new File(".").getAbsolutePath();
+		System.out.println(current_path);
+	}
+}

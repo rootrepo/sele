@@ -1,0 +1,19 @@
+package com.rootrepo.main;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+public class ClassLoader {
+
+	public static void main(String[] args) {
+		
+		Properties initProperties = new Properties();
+		try {
+			FileInputStream initFileInputStream = new FileInputStream("D:\\selenium\\workspace\\SELENIUM\\source\\com\\rootrepo\\main\\InitLoad.properties");
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+	}
+}
