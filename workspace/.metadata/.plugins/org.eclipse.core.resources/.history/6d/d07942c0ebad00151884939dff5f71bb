@@ -1,0 +1,14 @@
+package com.rootrepo.pojo;
+
+public class InstructionPojo {
+
+	public String action;
+	public String value;
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		System.out.println("action = "+ action + "Value = "+ value );
+		return super.toString();
+	}
+}

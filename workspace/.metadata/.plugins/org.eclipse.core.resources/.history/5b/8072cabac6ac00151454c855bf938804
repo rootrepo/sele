@@ -1,0 +1,9 @@
+package com.rootrepo.pojo;
+
+public class InstructionPojo {
+
+	String action;
+	String value;
+	String arg1;
+	String arg2;
+}

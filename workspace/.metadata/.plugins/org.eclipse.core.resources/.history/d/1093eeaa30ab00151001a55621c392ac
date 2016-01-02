@@ -1,0 +1,13 @@
+package com.rootrepo.main;
+
+public class DummyMain {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.rootrepo.main.ClassLoader");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Error ClassLoader not found");
+			e.printStackTrace();
+		}
+	}
+}

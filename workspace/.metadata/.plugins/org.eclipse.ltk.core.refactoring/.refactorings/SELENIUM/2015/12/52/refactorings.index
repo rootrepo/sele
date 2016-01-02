@@ -1,2 +1,9 @@
 1451055411932	Rename source folder 'src'
 1451059564576	Move file
+1451065505126	Encapsulate field 'global_initProperties'
+1451065634431	Rename method 'getProperty'
+1451078599524	Copy file
+1451078641549	Delete element
+1451079395273	Delete element
+1451079409273	Move file
+1451079815484	Encapsulate field 'globalInitProperties'

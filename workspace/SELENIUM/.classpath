@@ -52,5 +52,14 @@
 	<classpathentry kind="lib" path="libs/xalan-2.7.2.jar"/>
 	<classpathentry kind="lib" path="libs/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="libs/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="libs/log/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="libs/log/slf4j-api-1.7.13.jar"/>
+	<classpathentry kind="lib" path="libs/log/slf4j-log4j12-1.7.13.jar"/>
+	<classpathentry kind="lib" path="config"/>
+	<classpathentry kind="lib" path="libs/jdbc/jdbc.jar"/>
+	<classpathentry kind="lib" path="libs/poi/poi-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="libs/poi/poi-ooxml-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="libs/poi/poi-ooxml-schemas-3.13-20150929.jar"/>
+	<classpathentry kind="lib" path="libs/poi/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

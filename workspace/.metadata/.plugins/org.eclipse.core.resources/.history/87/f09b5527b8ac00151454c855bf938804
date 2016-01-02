@@ -1,0 +1,13 @@
+package com.rootrepo.exception;
+
+@SuppressWarnings("serial")
+public class SeleLibException extends Exception{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2167618072272523042L;
+
+	
+	
+}

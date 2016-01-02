@@ -1,0 +1,44 @@
+package com.rootrepo.excelutil;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData; 
+import java.sql.DriverManager; 
+import java.sql.ResultSet; 
+import java.sql.ResultSetMetaData; 
+import java.sql.Statement; 
+import java.util.StringTokenizer; 
+public class ConnectExcel{ 
+	
+public static void main(String[] s){
+		
+		Connection connection = null; 
+		Statement statement = null; 
+		String fileName = "D:/TestSheet.xls"; 
+		try{ 
+			Class.forName( "sun.jdbc.odbc.JdbcOdbcDriver" ); 
+		
+		connection = DriverManager.getConnection("jdbc:odbc:Driver={Microsoft Excel Driver (*.xls)};DBQ=" + fileName); 
+		connection = DriverManager.getConnection("jdbc:odbc:ConnectExcelDSN"); 
+		statement = connection.createStatement(); 
+		String query = "Select [Name] from [Sheet1$]"; 
+		//
+		String query1 = "Select [Name] from [Sheet1$] where [Name] like &#145;%M%&#146;"; 
+		ResultSet rs = statement.executeQuery( query ); 
+		while(rs.next()){ 
+			System.out.println( rs.getString(1) +"\n"); 
+			}
+		
+			connection.close();
+			}
+		
+			
+		
+		catch( Exception e ){
+			
+		}
+				 
+		finally{
+			
+		}
+		
+}

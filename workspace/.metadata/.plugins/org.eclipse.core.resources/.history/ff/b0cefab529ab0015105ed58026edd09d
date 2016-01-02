@@ -1,0 +1,17 @@
+package com.rootrepo.main;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+public class ClassLoader {
+
+	public static void main(String[] args) {
+		
+		
+	}
+	 public static getProperty(){
+		
+	}
+}

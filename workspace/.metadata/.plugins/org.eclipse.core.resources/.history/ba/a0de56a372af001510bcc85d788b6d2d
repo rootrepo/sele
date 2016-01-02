@@ -1,0 +1,66 @@
+package com.rootrepo.excelutil;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import com.rootrepo.pojo.InstructionPojo;
+
+
+public class ExcelDriver {
+
+	static Logger logger = LoggerFactory.getLogger(ExcelDriver.class);
+	@SuppressWarnings("unchecked")
+	public static void getDataFromFile(String fullPathToFile, String returnFormat){
+		
+		ConcurrentHashMap<String, List<InstructionPojo>> scenarioAsListInstructions = null;
+		if (fullPathToFile.endsWith("xlsx")){
+			
+			if(returnFormat.equalsIgnoreCase("LIST")){
+				scenarioAsListInstructions = (ConcurrentHashMap<String, List<InstructionPojo>>) ExcelDriverXLSX.getDataFromFileXLSX(fullPathToFile, returnFormat);
+				ExcelDriver.display(scenarioAsListInstructions, returnFormat);
+			}else {
+				if (returnFormat.equalsIgnoreCase("MAP")) {
+					
+				}
+			}
+			
+			/*List<InstructionPojo> instructions = scenarioAsListInstructions.get("sheet0");
+			System.out.println(instructions.size());
+			Iterator<InstructionPojo> iterator = instructions.iterator();
+			while (iterator.hasNext()) {
+				InstructionPojo instructionPojo = (InstructionPojo) iterator
+						.next();
+				System.out.println(instructionPojo.toString());
+				
+			}
+			System.out.println(scenarioAsListInstructions.get("sheet0").get(0).toString());*/
+		}
+		else
+			if (fullPathToFile.endsWith("xls"))
+				ExcelDriverXLS.getDataFromFileXLS(fullPathToFile, returnFormat);
+	}
+	
+	public static void main(String[] argv) {
+		ExcelDriver.getDataFromFile("D:\\selenium\\xls\\testcases\\payments.xlsx", "LIST");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static void display(Object object,String type){
+		if(type.equalsIgnoreCase("list")){
+			ConcurrentHashMap<String, List<InstructionPojo>> scenarioAsListInstructions = (ConcurrentHashMap<String, List<InstructionPojo>>) object;
+			 Iterator<String>  keySetIterator = scenarioAsListInstructions.keySet().iterator();
+			 while (keySetIterator.hasNext()) {
+				 
+				String keyString = (String) keySetIterator.next();
+				List<InstructionPojo> listInstructions = scenarioAsListInstructions.get(keyString);
+				Iterator<InstructionPojo> instructionPojoIterator = listInstructions.iterator();
+				while (instructionPojoIterator.hasNext()) {
+					InstructionPojo instructionPojo = (InstructionPojo) instructionPojoIterator.next();
+					logger.trace(instructionPojo.toString());
+				}
+			}
+		}
+	}
+}

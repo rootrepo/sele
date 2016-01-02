@@ -1,0 +1,6 @@
+package com.rootrepo.exception;
+
+public class SeleLibException extends Exception{
+
+	
+}
